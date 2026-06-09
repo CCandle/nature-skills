@@ -1,0 +1,41 @@
+name: cqn-paper-reader
+version: 1.0.0
+description: |
+  Declarative manifest for engineering paper reader. Detects source type
+  to load extraction guidance while keeping core principles always loaded.
+
+always_load:
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-source-grounding.md
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - ../_shared/terminology/cqn-terminology-ledger.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  source_type:
+    detect: |
+      Determine how the paper was provided.
+    values:
+      pdf:   static/fragments/source_type/pdf.md
+      doi:   static/fragments/source_type/doi.md
+      arxiv: static/fragments/source_type/arxiv.md
+      url:   static/fragments/source_type/url.md
+    default: pdf
+
+references:
+  on_demand:
+    - condition: exact output schema and field descriptions
+      path: references/output-spec.md
+    - condition: evaluating reproducibility from the paper
+      path: references/reproducibility-checklist.md
+    - condition: handling missing or underspecified information
+      path: references/missing-information.md
+    - condition: extracting method details
+      path: references/method-extraction.md
+    - condition: extracting experimental parameters
+      path: references/experiment-extraction.md
+    - condition: reading and interpreting figures
+      path: references/figure-reading.md
+    - condition: evaluating relevance to own research
+      path: references/research-usefulness.md
