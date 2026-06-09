@@ -5,10 +5,10 @@ description: |
   to load domain-specific patterns while keeping the core workflow always loaded.
 
 always_load:
-  - ../../_shared/core/cqn-research-principles.md
-  - ../../_shared/core/cqn-engineering-claim-rules.md
-  - ../../_shared/measurement/cqn-measurement-rules.md
-  - ../../_shared/templates/cqn-hardware-ledger-template.md
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/measurement/cqn-measurement-rules.md
+  - ../_shared/templates/cqn-hardware-ledger-template.md
   - static/core/stance.md
   - static/core/workflow.md
 

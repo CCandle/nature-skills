@@ -21,10 +21,10 @@ fragments from disk as described below.
 Read [manifest.yaml](manifest.yaml). Then read every file listed under
 `always_load`:
 
-- `../../_shared/core/cqn-research-principles.md`
-- `../../_shared/core/cqn-engineering-claim-rules.md`
-- `../../_shared/measurement/cqn-measurement-rules.md`
-- `../../_shared/templates/cqn-hardware-ledger-template.md`
+- `../_shared/core/cqn-research-principles.md`
+- `../_shared/core/cqn-engineering-claim-rules.md`
+- `../_shared/measurement/cqn-measurement-rules.md`
+- `../_shared/templates/cqn-hardware-ledger-template.md`
 - `static/core/stance.md`
 - `static/core/workflow.md`
 

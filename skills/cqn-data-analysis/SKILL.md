@@ -17,13 +17,13 @@ so conclusions are reproducible and reviewable.
 Read [manifest.yaml](manifest.yaml). Then read every file listed under
 `always_load`:
 
-- `../../_shared/core/cqn-research-principles.md`
-- `../../_shared/core/cqn-engineering-claim-rules.md`
-- `../../_shared/core/cqn-no-hallucination-policy.md`
-- `../../_shared/measurement/cqn-measurement-rules.md`
-- `../../_shared/measurement/cqn-fft-rules.md`
-- `../../_shared/measurement/cqn-calibration-rules.md`
-- `../../_shared/measurement/cqn-uncertainty-rules.md`
+- `../_shared/core/cqn-research-principles.md`
+- `../_shared/core/cqn-engineering-claim-rules.md`
+- `../_shared/core/cqn-no-hallucination-policy.md`
+- `../_shared/measurement/cqn-measurement-rules.md`
+- `../_shared/measurement/cqn-fft-rules.md`
+- `../_shared/measurement/cqn-calibration-rules.md`
+- `../_shared/measurement/cqn-uncertainty-rules.md`
 - `static/core/stance.md`
 - `static/core/workflow.md`
 
@@ -64,4 +64,8 @@ reproduce the reported metrics from the source data.
 
 - All analysis parameters must be written in the report, not only in the script
 - Python is the default scripting language
-- If the user provides no data, ask for it — do not generate example data
+- If raw data is not provided, do not fabricate data. Instead:
+  - produce an analysis plan or template
+  - list required data fields (fs, unit, calibration, etc.)
+  - mark unavailable metrics as `Unknown`
+  - explain what cannot be computed yet

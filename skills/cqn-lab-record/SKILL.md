@@ -17,11 +17,11 @@ It enforces evidence classification, source grounding, and version tracking.
 Read [manifest.yaml](manifest.yaml). Then read every file listed under
 `always_load`:
 
-- `../../_shared/core/cqn-research-principles.md`
-- `../../_shared/core/cqn-engineering-claim-rules.md`
-- `../../_shared/core/cqn-source-grounding.md`
-- `../../_shared/templates/cqn-hardware-ledger-template.md`
-- `../../_shared/templates/cqn-lab-record-template.md`
+- `../_shared/core/cqn-research-principles.md`
+- `../_shared/core/cqn-engineering-claim-rules.md`
+- `../_shared/core/cqn-source-grounding.md`
+- `../_shared/templates/cqn-hardware-ledger-template.md`
+- `../_shared/templates/cqn-lab-record-template.md`
 - `static/core/stance.md`
 - `static/core/workflow.md`
 
@@ -35,7 +35,7 @@ Extract all available information from the user's notes. Classify:
 
 ### 3. Build the record
 
-Follow the template in `../../_shared/templates/cqn-lab-record-template.md`.
+Follow the template in `../_shared/templates/cqn-lab-record-template.md`.
 Fill every field that has information. Leave unknowns as `Unknown`.
 
 ### 4. Apply evidence classification

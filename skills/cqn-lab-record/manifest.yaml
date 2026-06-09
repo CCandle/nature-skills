@@ -5,11 +5,11 @@ description: |
   always the same; variation is in how the input is extracted and classified.
 
 always_load:
-  - ../../_shared/core/cqn-research-principles.md
-  - ../../_shared/core/cqn-engineering-claim-rules.md
-  - ../../_shared/core/cqn-source-grounding.md
-  - ../../_shared/templates/cqn-hardware-ledger-template.md
-  - ../../_shared/templates/cqn-lab-record-template.md
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/core/cqn-source-grounding.md
+  - ../_shared/templates/cqn-hardware-ledger-template.md
+  - ../_shared/templates/cqn-lab-record-template.md
   - static/core/stance.md
   - static/core/workflow.md
 

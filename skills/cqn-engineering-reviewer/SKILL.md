@@ -18,10 +18,10 @@ throughput, thermal limits, safety, and repairability.
 Read [manifest.yaml](manifest.yaml). Then read every file listed under
 `always_load`:
 
-- `../../_shared/core/cqn-research-principles.md`
-- `../../_shared/core/cqn-engineering-claim-rules.md`
-- `../../_shared/measurement/cqn-measurement-rules.md`
-- `../../_shared/measurement/cqn-fft-rules.md`
+- `../_shared/core/cqn-research-principles.md`
+- `../_shared/core/cqn-engineering-claim-rules.md`
+- `../_shared/measurement/cqn-measurement-rules.md`
+- `../_shared/measurement/cqn-fft-rules.md`
 - `static/core/stance.md`
 - `static/core/workflow.md`
 

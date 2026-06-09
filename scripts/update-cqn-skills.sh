@@ -52,7 +52,11 @@ for path in "$SRC"/cqn-*/; do
   if [ -d "$path" ]; then
     d="$(basename "$path")"
     mkdir -p "$DST/$d"
-    rsync -a --delete "$path" "$DST/$d/"
+    if [ "${CQN_SYNC_DELETE:-0}" = "1" ]; then
+      rsync -a --delete "$path" "$DST/$d/"
+    else
+      rsync -a "$path" "$DST/$d/"
+    fi
     echo "    ✓ $d"
     COUNT=$((COUNT + 1))
   fi
