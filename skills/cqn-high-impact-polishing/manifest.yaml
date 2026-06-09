@@ -1,5 +1,5 @@
 name: cqn-high-impact-polishing
-version: 1.0.0
+version: 1.1.0
 description: |
   Low-frequency polishing adapter for high-impact journals. Improves
   language without changing claims or evidence.
@@ -10,3 +10,12 @@ always_load:
   - ../_shared/core/cqn-no-hallucination-policy.md
   - static/core/stance.md
   - static/core/workflow.md
+
+references:
+  on_demand:
+    - condition: consulting legacy nature-polishing for phrasing patterns
+      path: references/nature-polishing-bridge.md
+    - condition: verifying claim strength is preserved after polish
+      path: references/claim-preserving-polish.md
+    - condition: checking engineering terms survive the polish
+      path: references/engineering-term-preservation.md

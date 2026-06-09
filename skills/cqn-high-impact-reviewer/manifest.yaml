@@ -1,5 +1,5 @@
 name: cqn-high-impact-reviewer
-version: 1.0.0
+version: 1.1.0
 description: |
   Low-frequency pre-submission reviewer simulation for high-impact journals.
 
@@ -9,3 +9,12 @@ always_load:
   - ../_shared/core/cqn-no-hallucination-policy.md
   - static/core/stance.md
   - static/core/workflow.md
+
+references:
+  on_demand:
+    - condition: consulting legacy nature-reviewer structure
+      path: references/nature-reviewer-bridge.md
+    - condition: pre-submission rejection risk audit
+      path: references/rejection-risk-audit.md
+    - condition: detailed review axes definition
+      path: references/high-impact-review-axes.md
