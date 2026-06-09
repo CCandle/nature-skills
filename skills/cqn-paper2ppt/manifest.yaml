@@ -1,0 +1,39 @@
+name: cqn-paper2ppt
+version: 1.0.0
+description: |
+  Declarative manifest for engineering presentation skill. Detects deck
+  type to load type-specific slide structure.
+
+always_load:
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - ../_shared/terminology/cqn-terminology-ledger.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  deck_type:
+    detect: |
+      Determine the kind of presentation needed.
+    values:
+      paper-group-meeting: static/fragments/deck_type/paper-group-meeting.md
+      experiment-progress: static/fragments/deck_type/experiment-progress.md
+      stage-review:        static/fragments/deck_type/stage-review.md
+      defense:             static/fragments/deck_type/defense.md
+    default: paper-group-meeting
+
+references:
+  on_demand:
+    - condition: designing slide structure and flow
+      path: references/slide-structure.md
+    - condition: writing speaker notes
+      path: references/speaker-notes.md
+    - condition: placing figures on slides
+      path: references/figure-to-slide.md
+    - condition: describing experiment platform
+      path: references/experiment-platform-slide.md
+    - condition: building evidence tables for slides
+      path: references/evidence-slide.md
+    - condition: exporting to .pptx with python-pptx
+      path: references/pptx-export-guidelines.md

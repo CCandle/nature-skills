@@ -1,0 +1,30 @@
+name: cqn-engineering-reviewer
+version: 1.0.0
+description: |
+  Declarative manifest for engineering reviewer. Detects review type to load
+  domain-specific checklists.
+
+always_load:
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/measurement/cqn-measurement-rules.md
+  - ../_shared/measurement/cqn-fft-rules.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  review_type:
+    detect: |
+      Determine the engineering domain to review from the user's description.
+    values:
+      adc-sampling-chain:   references/adc-sampling-chain-checklist.md
+      power-integrity:      references/power-integrity-review.md
+      fpga-design:          references/fpga-clock-domain-review.md
+      firmware-architecture: references/firmware-architecture-review.md
+      ai-deployment:        references/ai-deployment-review.md
+    default: general-hardware
+
+references:
+  on_demand:
+    - condition: PCB or connector layout review
+      path: references/test-point-debuggability.md

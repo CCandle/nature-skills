@@ -1,0 +1,50 @@
+name: cqn-figure
+version: 1.0.0
+description: |
+  Declarative manifest for the dual-mode engineering figure skill.
+  Resolves mode (engineering-report / high-impact-paper) and backend
+  (python / r) before plotting. Engineering figure-type references
+  are loaded on demand.
+
+always_load:
+  - ../_shared/measurement/cqn-measurement-rules.md
+  - ../_shared/measurement/cqn-fft-rules.md
+  - static/core/contract.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  mode:
+    detect: |
+      Determine whether the figure is for an engineering report or a
+      high-impact publication. Default to engineering-report. Switch to
+      high-impact-paper only when the user explicitly names a journal,
+      says "for publication", or asks for Nature/paper style.
+    values:
+      engineering-report:  static/fragments/mode/engineering-report.md
+      high-impact-paper:   static/fragments/mode/high-impact-paper.md
+    default: engineering-report
+    multi: false
+
+  backend:
+    detect: |
+      Python is the default and always-available backend. Only ask if
+      the user provides R code, R data, or explicitly requests R.
+    values:
+      python:  static/fragments/backend/python.md
+      r:       static/fragments/backend/r.md
+    default: python
+    multi: false
+
+references:
+  on_demand:
+    - condition: building the figure contract (core conclusion, panel map, evidence hierarchy)
+      path: references/figure-contract.md
+    - condition: final QA before delivery, revision, or journal submission
+      path: references/qa-contract.md
+    - condition: Python palette, helper functions, validation rules
+      path: references/api.md
+    - condition: colour theory, typography, layout rationale
+      path: references/design-theory.md
+    - condition: reusable layout and encoding patterns
+      path: references/common-patterns.md

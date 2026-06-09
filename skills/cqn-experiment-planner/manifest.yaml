@@ -1,0 +1,31 @@
+name: cqn-experiment-planner
+version: 1.0.0
+description: |
+  Declarative manifest for the experiment planner. Detects the experiment type
+  to load domain-specific patterns while keeping the core workflow always loaded.
+
+always_load:
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/measurement/cqn-measurement-rules.md
+  - ../_shared/templates/cqn-hardware-ledger-template.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  experiment_type:
+    detect: |
+      Classify the experiment request into one type. Use general for
+      experiments that don't fit the other categories.
+    values:
+      adc-characterisation:  references/adc-experiment-design.md
+      power-electronics:      references/power-electronics-experiment.md
+      fpga-test:              references/fpga-ps-pl-test-plan.md
+      thermal-experiment:     references/thermal-experiment.md
+      embedded-ai:            references/embedded-ai-experiment.md
+    default: general
+
+references:
+  on_demand:
+    - condition: high-voltage or high-current experiment
+      path: references/safety-checklist.md

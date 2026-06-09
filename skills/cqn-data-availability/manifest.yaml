@@ -1,0 +1,18 @@
+name: cqn-data-availability
+version: 1.1.0
+description: |
+  Data availability statements and FAIR checks for engineering research.
+
+always_load:
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+references:
+  on_demand:
+    - condition: listing engineering-specific data artifacts
+      path: references/engineering-repro-package.md
+    - condition: handling restricted firmware or bitstream
+      path: references/firmware-bitstream-policy.md
+    - condition: drafting standard restriction phrasings
+      path: references/restriction-language.md

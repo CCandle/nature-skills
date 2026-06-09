@@ -1,0 +1,21 @@
+name: cqn-high-impact-writing
+version: 1.0.0
+description: |
+  Low-frequency adapter skill. Upgrades engineering drafts for high-impact
+  journals while preserving CQN evidence discipline.
+
+always_load:
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+references:
+  on_demand:
+    - condition: consulting legacy nature-writing for section structure
+      path: references/nature-writing-bridge.md
+    - condition: pre-upgrade readiness check
+      path: references/high-impact-upgrade-checklist.md
+    - condition: verifying evidence preservation after upgrade
+      path: references/evidence-preservation.md

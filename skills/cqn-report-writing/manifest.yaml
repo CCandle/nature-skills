@@ -1,0 +1,37 @@
+name: cqn-report-writing
+version: 1.0.0
+description: |
+  Declarative manifest for engineering report writing. Detects report type
+  to load type-specific structure and emphasis while keeping the core
+  workflow and evidence rules always loaded.
+
+always_load:
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - ../_shared/measurement/cqn-measurement-rules.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  report_type:
+    detect: |
+      Determine which type of report the user needs based on their
+      description, timeline, and audience.
+    values:
+      group-meeting:   static/fragments/report_type/group-meeting.md
+      stage-report:    static/fragments/report_type/stage-report.md
+      proposal:        static/fragments/report_type/proposal.md
+      project-summary: static/fragments/report_type/project-summary.md
+    default: group-meeting
+
+references:
+  on_demand:
+    - condition: converting experiment records into report text
+      path: references/experiment-record-to-progress.md
+    - condition: writing about failures, debugging, or lessons learned
+      path: references/failure-case-writing.md
+    - condition: planning or justifying next steps
+      path: references/next-step-planning.md
+    - condition: building evidence tables or claim-evidence alignment
+      path: references/evidence-to-report.md

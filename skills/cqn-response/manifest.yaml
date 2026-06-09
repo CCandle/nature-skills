@@ -1,0 +1,20 @@
+name: cqn-response
+version: 1.1.0
+description: |
+  Reviewer response drafting skill. Point-by-point replies with
+  evidence mapping and change tracking.
+
+always_load:
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+references:
+  on_demand:
+    - condition: mapping each response to evidence sources
+      path: references/response-evidence-map.md
+    - condition: handling requests for new experiments
+      path: references/no-new-experiment-policy.md
+    - condition: tracking manuscript changes per comment
+      path: references/manuscript-change-log.md
