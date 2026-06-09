@@ -1,0 +1,20 @@
+name: cqn-journal-style
+version: 1.0.0
+description: |
+  Manuscript style alignment to target journal formats.
+
+always_load:
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  style:
+    detect: |
+      Determine the target journal style from the user's request.
+    values:
+      ieee:           static/fragments/style/ieee.md
+      nature:         static/fragments/style/nature.md
+      chinese-thesis: static/fragments/style/chinese-thesis.md
+      generic:        static/fragments/style/generic.md
+    default: generic
+    multi: false

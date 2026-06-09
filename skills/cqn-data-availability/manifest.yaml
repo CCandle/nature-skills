@@ -1,0 +1,9 @@
+name: cqn-data-availability
+version: 1.0.0
+description: |
+  Data availability statements and FAIR checks for engineering research.
+
+always_load:
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - static/core/stance.md
+  - static/core/workflow.md
