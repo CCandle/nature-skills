@@ -1,0 +1,11 @@
+name: cqn-response
+version: 1.0.0
+description: |
+  Reviewer response drafting skill. Point-by-point replies with
+  evidence discipline.
+
+always_load:
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - static/core/stance.md
+  - static/core/workflow.md
