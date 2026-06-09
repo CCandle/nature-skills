@@ -86,7 +86,7 @@ for skill in "${CQN_DIRS[@]}"; do
           errors+=("manifest references non-existent path: $raw (resolved: $resolved)")
         fi
       fi
-    done < <(grep -E '^\s+-\s|path:\s|^\s+[a-z].*:.*\.(md|py)' "$mf" 2>/dev/null || true)
+    done < <(grep -E '^[[:space:]]+-[[:space:]]|path:[[:space:]]|^[[:space:]]+[a-z].*:.*\.(md|py)' "$mf" 2>/dev/null || true)
   fi
 
   # ── Report ────────────────────────────────────────────────────────────
