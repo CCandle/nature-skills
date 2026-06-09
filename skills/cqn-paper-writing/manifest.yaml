@@ -1,0 +1,43 @@
+name: cqn-paper-writing
+version: 1.0.0
+description: |
+  Declarative manifest for engineering paper writing. Detects sections
+  to draft and loads section-specific guidance.
+
+always_load:
+  - ../_shared/core/cqn-research-principles.md
+  - ../_shared/core/cqn-engineering-claim-rules.md
+  - ../_shared/core/cqn-source-grounding.md
+  - ../_shared/core/cqn-no-hallucination-policy.md
+  - ../_shared/measurement/cqn-measurement-rules.md
+  - static/core/stance.md
+  - static/core/workflow.md
+
+axes:
+  section:
+    detect: |
+      Identify which section(s) to draft. May be multiple.
+    values:
+      abstract:     static/fragments/section/abstract.md
+      introduction: static/fragments/section/introduction.md
+      related-work: static/fragments/section/related-work.md
+      method:       static/fragments/section/method.md
+      experiment:   static/fragments/section/experiment.md
+      results:      static/fragments/section/results.md
+      conclusion:   static/fragments/section/conclusion.md
+    multi: true
+
+references:
+  on_demand:
+    - condition: aligning claims with evidence in writing
+      path: references/claim-evidence-writing.md
+    - condition: structuring the method section
+      path: references/method-section-writing.md
+    - condition: structuring the experiment section
+      path: references/experiment-section-writing.md
+    - condition: presenting results
+      path: references/result-section-writing.md
+    - condition: writing limitations and boundaries
+      path: references/limitation-writing.md
+    - condition: engineering paper stylistic conventions
+      path: references/engineering-paper-style.md
