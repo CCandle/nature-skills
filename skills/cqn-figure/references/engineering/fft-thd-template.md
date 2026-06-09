@@ -28,5 +28,5 @@ Frequency-domain analysis of a signal: harmonic content, THD, noise floor.
 
 ## Example caption
 "FFT of phase A current at 50 Hz fundamental, 10 kHz switching.
-N = 8192, Blackman-Harris window, Δf = 122 Hz. THD (H2-H10) = 2.3 %.
-Noise floor = -90 dBV."
+fs = 1 MSPS, N = 8192, Blackman-Harris window, Δf ≈ 122 Hz. THD (H2–H10) = 2.3 %.
+Noise floor = –90 dBV."

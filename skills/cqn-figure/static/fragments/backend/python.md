@@ -1,6 +1,6 @@
 # Python Backend Quick-Start
 
-Default and required backend. matplotlib + numpy + (optionally) seaborn.
+Default and required backend: matplotlib + numpy. Do not require seaborn.
 
 ## Environment check
 

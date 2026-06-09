@@ -41,7 +41,7 @@ Default: `engineering-report`. If the user explicitly says "for publication",
 
 Python is the default and required backend. Ask only if clearly ambiguous.
 
-- `python` — matplotlib / seaborn / numpy. Default.
+- `python` — matplotlib / numpy. Default.
 - `r` — ggplot2 / patchwork. Optional; does not block acceptance.
 
 ### 4. Load the matching fragments
