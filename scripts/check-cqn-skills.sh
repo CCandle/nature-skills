@@ -44,6 +44,7 @@ echo ""
 for skill in "${CQN_DIRS[@]}"; do
   name="$(basename "$skill")"
   errors=()
+  warnings=()
 
   # ── Check 1: Required files ──────────────────────────────────────────
   for f in SKILL.md manifest.yaml README.md; do
@@ -58,6 +59,20 @@ for skill in "${CQN_DIRS[@]}"; do
   [ -d "$skill/references" ] && has_refs=true
   if ! $has_static && ! $has_refs; then
     errors+=("missing both static/ and references/ (need at least one)")
+  fi
+
+  # ── Thin-skill warning: no references/ ───────────────────────────────
+  # Low-frequency skills (high-impact*, citation, response, data-availability,
+  # journal-style) should typically have references for policy/rules content.
+  if ! $has_refs; then
+    case "$name" in
+      cqn-high-impact-*|cqn-citation|cqn-response|cqn-data-availability|cqn-journal-style)
+        warnings+=("no references/ directory (adapter skill with no policy references)")
+        ;;
+      cqn-paper2ppt|cqn-paper-reader|cqn-paper-writing|cqn-report-writing|cqn-figure)
+        warnings+=("no references/ directory (may need example templates)")
+        ;;
+    esac
   fi
 
   # ── Check 3: Manifest path references ────────────────────────────────
@@ -90,15 +105,21 @@ for skill in "${CQN_DIRS[@]}"; do
   fi
 
   # ── Report ────────────────────────────────────────────────────────────
-  if [ ${#errors[@]} -eq 0 ]; then
-    echo -e "  ${GREEN}[PASS]${NC} $name"
-    PASS=$((PASS + 1))
-  else
+  if [ ${#errors[@]} -gt 0 ]; then
     echo -e "  ${RED}[FAIL]${NC} $name"
     for e in "${errors[@]}"; do
       echo "         - $e"
     done
     FAIL=$((FAIL + 1))
+  elif [ ${#warnings[@]} -gt 0 ]; then
+    echo -e "  ${GREEN}[PASS]${NC} $name ${YELLOW}(+${#warnings[@]} warning(s))${NC}"
+    for w in "${warnings[@]}"; do
+      echo "         ${YELLOW}⚠${NC} $w"
+    done
+    PASS=$((PASS + 1))
+  else
+    echo -e "  ${GREEN}[PASS]${NC} $name"
+    PASS=$((PASS + 1))
   fi
 done
 
