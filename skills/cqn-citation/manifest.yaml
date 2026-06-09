@@ -1,9 +1,19 @@
 name: cqn-citation
-version: 1.0.0
+version: 2.0.0
 description: |
-  Claim-centered citation mapping. Engineering-first priority.
+  Claim-centered citation mapping with dual search/no-search mode.
+  Engineering-first citation priority.
 
 always_load:
   - ../_shared/core/cqn-no-hallucination-policy.md
   - static/core/stance.md
   - static/core/workflow.md
+
+references:
+  on_demand:
+    - condition: search tools available and search is requested
+      path: references/search-policy.md
+    - condition: building claim-to-source mapping table
+      path: references/claim-source-mapping.md
+    - condition: no search tool available or user provides no library
+      path: references/no-search-output.md

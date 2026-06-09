@@ -2,8 +2,14 @@
 
 ## Traceable citations only
 
-Every citation must be from a real publication you can identify
-(title, author, venue, year, DOI if available). Do not fabricate.
+Every citation in search-enabled mode must be from a real publication
+you can identify (title, author, venue, year, DOI if available).
+Do not fabricate.
+
+## No fabricated references in no-search mode
+
+If you cannot search, do not guess. A plausible-sounding but fake
+reference is worse than no reference. Output requirements only.
 
 ## Engineering-first
 

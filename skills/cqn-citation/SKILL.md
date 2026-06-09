@@ -1,15 +1,39 @@
 ---
 name: cqn-citation
-description: Claim-centered citation management for engineering papers. Maps claims to supporting citations from IEEE, IET, Elsevier engineering journals, application notes, and datasheets. Does not default to Nature/Science citations.
-version: 1.0.0
+description: Claim-centered citation management with dual-mode operation. In search-enabled mode, performs real literature searches. In no-search mode, outputs citation requirements without fabricated references. Engineering-first citation priority.
+version: 2.0.0
 author: Carlos
 ---
 
 # CQN Citation — Claim-Centered Citation Skill
 
 Low-frequency skill. Maps manuscript claims to supporting citations.
-Priority: engineering journals and technical documentation over
-high-impact general science journals.
+Operates in two modes depending on available search capability.
+
+## Dual-mode operation
+
+### search-enabled mode
+
+When the agent has web / academic search / repository search tools:
+
+- Perform actual searches for each claim
+- Output real citations with traceable metadata
+- Include claim → source mapping with rationale
+- Each citation must be from a verified publication
+
+### no-search mode
+
+When no search tool is available or the user did not provide a
+reference library:
+
+- Do NOT output fabricated Author / Title / Journal / Year
+- Output citation requirements instead:
+  - What type of source the claim needs
+  - Preferred source tier (per the priority list below)
+  - Suggested search keywords
+  - What must be verified before citing
+  - Whether a datasheet, standard, or application note is preferred
+- Mark every citation line as: `Not searched — user must provide source`
 
 ## Citation priority
 
@@ -23,25 +47,44 @@ high-impact general science journals.
 
 ## Output structure
 
+### search-enabled mode output
+
 ```text
 # Citation Map
 
 ## Claim 1: [claim text]
 - Source type:
 - Suggested citations:
-  - [1] Author. Title. Journal. Year.
+  - [1] Author. Title. Journal. Year. DOI.
 - Rationale:
 - Confidence:
 
 ## Claim 2: ...
 ```
 
+### no-search mode output
+
+```text
+# Citation Requirements
+
+## Claim 1: [claim text]
+- Required support type:
+- Preferred source tier:
+- Search keywords:
+- Must verify:
+- Citation status: Not searched / user must provide source
+
+## Claim 2: ...
+```
+
 ## Rules
 
-- Each citation must be traceable to a real publication
-- Do not fabricate references
-- If no suitable citation is found, write:
+- In search-enabled mode: each citation must be traceable to a real
+  publication. Do not fabricate references.
+- In no-search mode: do NOT output plausible-looking citations.
+  Only output citation requirements.
+- If no suitable citation is found after searching, write:
   `[No suitable citation identified — may need original source]`
-- For each citation, state why it supports the claim
+- For each citation, state why it supports the claim.
 - Distinguish: direct support (same method/domain) vs indirect support
-  (analogous concept)
+  (analogous concept).
