@@ -72,3 +72,5 @@ Only open when needed:
 - For engineering papers, prioritise extracting: hardware platform,
   firmware version, sampling parameters, calibration, dataset, baseline,
   and ablation studies.
+- When the full source is not accessible, operate in partial-source mode
+  and explicitly state the reading boundary.

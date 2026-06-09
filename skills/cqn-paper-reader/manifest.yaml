@@ -21,6 +21,7 @@ axes:
       doi:   static/fragments/source_type/doi.md
       arxiv: static/fragments/source_type/arxiv.md
       url:   static/fragments/source_type/url.md
+      text:  static/fragments/source_type/text.md
     default: pdf
 
 references:
@@ -39,3 +40,5 @@ references:
       path: references/figure-reading.md
     - condition: evaluating relevance to own research
       path: references/research-usefulness.md
+    - condition: handling inaccessible or partial sources
+      path: references/source-access-policy.md
