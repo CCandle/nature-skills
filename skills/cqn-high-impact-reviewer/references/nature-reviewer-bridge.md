@@ -2,14 +2,16 @@
 
 Bridge to legacy `nature-reviewer` for pre-submission review structure.
 
+All legacy paths below are repository-root paths.
+
 ## When to consult nature-reviewer
 
 When structuring a pre-submission review for a Nature-family journal:
 
-- `../nature-reviewer/references/review-axes.md` — review dimensions
-- `../nature-reviewer/references/qa-checklist.md` — QA checklist
-- `../nature-reviewer/references/report-structure.md` — output structure
-- `../nature-reviewer/references/reviewer-workflow.md` — workflow
+- `skills/nature-reviewer/references/review-axes.md` — review dimensions
+- `skills/nature-reviewer/references/qa-checklist.md` — QA checklist
+- `skills/nature-reviewer/references/report-structure.md` — output structure
+- `skills/nature-reviewer/references/reviewer-workflow.md` — workflow
 
 ## Adaptation for CQN
 

@@ -3,17 +3,19 @@
 This skill is an adapter over CQN engineering evidence discipline and
 the legacy `nature-writing` skill.
 
+All legacy paths below are repository-root paths.
+
 ## When to consult nature-writing
 
 When the user specifically targets a Nature-family journal and needs
 section-level drafting patterns, consult legacy resources:
 
-- `../nature-writing/manifest.yaml` — always_load, axis definitions
-- `../nature-writing/static/core/stance.md` — default stance
-- `../nature-writing/static/core/workflow.md` — drafting workflow
-- `../nature-writing/static/fragments/section/` — per-section guidance
-- `../nature-writing/static/fragments/journal/` — journal-specific style
-- `../nature-writing/references/` — deep references and examples
+- `skills/nature-writing/manifest.yaml` — always_load, axis definitions
+- `skills/nature-writing/static/core/stance.md` — default stance
+- `skills/nature-writing/static/core/workflow.md` — drafting workflow
+- `skills/nature-writing/static/fragments/section/` — per-section guidance
+- `skills/nature-writing/static/fragments/journal/` — journal-specific style
+- `skills/nature-writing/references/` — deep references and examples
 
 ## Rules for bridging
 

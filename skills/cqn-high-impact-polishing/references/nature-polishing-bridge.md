@@ -2,16 +2,18 @@
 
 Bridge to legacy `nature-polishing` for high-impact prose refinement.
 
+All legacy paths below are repository-root paths.
+
 ## When to consult nature-polishing
 
 When polishing for a Nature-family journal and need section-level
 phrasing patterns, journal-specific style, or language fragments:
 
-- `../nature-polishing/manifest.yaml` — always_load, axis definitions
-- `../nature-polishing/static/fragments/section/` — per-section polish guidance
-- `../nature-polishing/static/fragments/language/` — language-specific rules
-- `../nature-polishing/static/fragments/journal/` — journal-specific style
-- `../nature-polishing/references/` — phrasebank, published patterns
+- `skills/nature-polishing/manifest.yaml` — always_load, axis definitions
+- `skills/nature-polishing/static/fragments/section/` — per-section polish guidance
+- `skills/nature-polishing/static/fragments/language/` — language-specific rules
+- `skills/nature-polishing/static/fragments/journal/` — journal-specific style
+- `skills/nature-polishing/references/` — phrasebank, published patterns
 
 ## Rules for bridging
 
